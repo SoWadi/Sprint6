@@ -1,0 +1,37 @@
+<div class="imgBg " [ngStyle]="{'background-image': 'url(' + imgString + ')'}">
+      <div class="customContainer d-flex flex-column align-items-center justify-content-between">
+      <button class="customHS border border-0 w-25" (click)="changeActiveStatus()">Hide / Show</button>
+
+
+
+      <div class="containerFrases text-center" *ngIf="isAvailable">
+
+            <!-- 
+            <div class="imgBg" [style.background-image]="'url(./assets/1.jpg)'">
+                  <img src="/projects/playground/src/assets/2.jpg" alt=""> -->
+
+
+            <div class="container-fluid d-flex">
+                  <button class="previous bg-secondary-subtle border-0 m-1 p-1  w-50" (click)="previous()">
+                        <h3>&laquo; Anterior</h3>
+                  </button>
+                  <button class="next bg-secondary-subtle border-0 m-1 p-1 w-50" (click)="next()">
+                        <h3>Següent &raquo;</h3>
+                  </button>
+            </div>
+
+            <!-- +++++++++++++ AVANT +++++++++++++ -->
+            <!--       <div class="class rounded-pill m-5" *ngFor="let phrase of frasesList; let i = index" [ngClass]="{'currentSentence': i === currentPosition}">
+                  <p> {{phrase.frase}}</p>
+            </div>
+      -->
+
+            <!-- +++++++++++++ APRES +++++++++++++ -->
+            <div class="class rounded-pill text-center  border border-2 border-dark" *ngFor="let phrase of frasesList; let i = index"
+                  [ngClass]="{'class2': i === currentPosition}">
+                  <p class=""> {{phrase.frase}}</p>
+            </div>
+      </div>
+</div>
+
+</div>
